@@ -4,6 +4,10 @@ import styles from '../styles/Global';
 import assets from '../assets';
 
 const Download = () => {
+  const handleSourceCode = () => {
+    const win = window.open("https://github.com/haqh310/NFT-Marketplace", '_blank');
+    win.focus();
+  }
   return (
     <div className={`${styles.section} ${styles.bgWhite}`}>
       <div className={`${styles.subSection} flex-col text-center`}>
@@ -11,7 +15,7 @@ const Download = () => {
           <h1 className={`${styles.h1Text} ${styles.blackText}`}>Download the Source Code</h1>
           <p className={`${styles.pText} ${styles.blackText}`}>Get the full source code on GitHub</p>
         </div>
-        <button className={styles.btnPrimary}>Source Code</button>
+        <button className={styles.btnPrimary} onClick={handleSourceCode}>Source Code</button>
         <div className={styles.flexCenter}>
           <img 
             src={assets.scene}
